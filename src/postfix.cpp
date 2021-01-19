@@ -36,7 +36,7 @@ std::string infix2postfix(std::string infix) {
     var.push(oper.pop());
   infix.clear();
   while (!var.isEmpty()) {
-    if (var.get() != '.' && infix.back() != '.')
+    if (var.get() != '.' && *infix.begin() != '.')
       infix.insert(infix.begin(), ' ');
     infix.insert(infix.begin(), var.pop());
   }
